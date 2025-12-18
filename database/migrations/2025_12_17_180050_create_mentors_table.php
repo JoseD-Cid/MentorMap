@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->decimal('latitude_aprox', total: 24, places: 20)->default(0.0);
             $table->decimal('longitude_aprox', total: 24, places: 20)->default(0.0);
+            
             //Foreign Key
             $table->foreignId('user_id')->constrained(table: 'users')->unique();
 

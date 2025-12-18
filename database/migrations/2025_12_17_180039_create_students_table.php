@@ -14,15 +14,14 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
 
-
             //Foreign Key
             $table->foreignId('user_id')->constrained(table: 'users')->unique();
 
             //Logs Fields
-            $table->timestamps(); 
-            $table->softDeletes(); 
-            $table->integer('created_by')->nullable();  
-            $table->integer('updated_by')->nullable(); 
+            $table->timestamps();
+            $table->softDeletes();
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
         });
     }
