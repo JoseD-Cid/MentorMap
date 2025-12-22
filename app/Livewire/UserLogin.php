@@ -11,6 +11,15 @@ class UserLogin extends Component
     public $email;
     public $password;
     public $reg;
+    public $aviso;
+
+    public function updatedPassword($valor) {
+        if(strlen($valor) > 0 && strlen($valor) < 8) {
+            $this->aviso = "La contraseña debe tener por lo menos 8 caracteres";
+        } else {
+            $this->aviso = "";
+        }
+    }
 
     public function render()
     {
@@ -41,7 +50,6 @@ class UserLogin extends Component
         } else {
             $this->reg = "No verificado";
         }
-
     }
 
     public function updatedInput($live)
