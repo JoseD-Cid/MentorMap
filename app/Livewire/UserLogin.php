@@ -6,12 +6,14 @@ use Livewire\Component;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
+
 class UserLogin extends Component
 {
     public $email;
     public $password;
     public $reg;
     public $aviso;
+
 
     public function updatedPassword($valor) {
         if(strlen($valor) > 0 && strlen($valor) < 8) {
@@ -36,9 +38,16 @@ class UserLogin extends Component
         ]);
 
         if (Auth::attempt($credentials)) {
-            $this->reg = "Usuario Verificado";
+            /** @var \App\Models\User $user */
+            $user = Auth::user();
+            if ($user->hasRole('mentor')) {
+                return $this->redirectRoute('mentor-dashboard');
+            } elseif ($user->hasRole('student')) {
+                return $this->redirectRoute('student-dashboard');
+            }
+
         } else {
-            $this->reg = "Credenciales incorrectas";
+
         }
     }
 
