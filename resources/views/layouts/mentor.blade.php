@@ -7,7 +7,6 @@
         <title>{{ $title ?? 'Page Title' }}</title>
     </head>
     <body>
-        Este es el layout de Mentor
         {{ $slot }}
     </body>
 </html>

@@ -7,7 +7,7 @@
         <title>{{ $title ?? 'Page Title' }}</title>
     </head>
     <body>
-        Este es el layout de Student
+        Student Layout
         {{ $slot }}
     </body>
 </html>
