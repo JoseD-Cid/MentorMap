@@ -8,11 +8,11 @@
     <title>{{ $title ?? 'Page Title' }}</title>
 </head>
 
-<body class="flex flex-col md:flex-row">
+<body class="flex flex-col md:flex-row overflow-hidden h-screen">
 
     <livewire:components.sidebar />
 
-    <main class="flex-1 md:ml-0">
+    <main class="flex-1 relative z-10 overflow-auto">
         {{ $slot }}
     </main>
 </body>

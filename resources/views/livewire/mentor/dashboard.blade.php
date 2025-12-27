@@ -1,3 +1,3 @@
-<div class="flex flex-row gap-4 p-4 bg-red-100">
-    Mentor Dashboard
+<div class="flex flex-col gap-4 p-4 h-max z-20">
+    <span>Estadísticas</span>
 </div>
