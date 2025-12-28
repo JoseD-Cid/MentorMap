@@ -38,8 +38,10 @@ class UserLogin extends Component
         ]);
 
         if (Auth::attempt($credentials)) {
-            /** @var \App\Models\User $user */
+
+            /** @var \App\Models\User $user */
             $user = Auth::user();
+
             if ($user->hasRole('mentor')) {
                 return $this->redirectRoute('mentor-dashboard');
             } elseif ($user->hasRole('student')) {
