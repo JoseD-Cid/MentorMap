@@ -38,7 +38,6 @@ class UserLogin extends Component
         ]);
 
         if (Auth::attempt($credentials)) {
-
             /** @var \App\Models\User $user */
             $user = Auth::user();
 
