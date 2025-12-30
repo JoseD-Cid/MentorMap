@@ -15,7 +15,7 @@ class Dashboard extends Component
     public $subjects;
     public $subject_id;
 
-    #[Layout('components.layouts.mentor')]
+    #[Layout('layouts.mentor')]
     public function render()
     {
         return view('livewire.mentor.dashboard');
