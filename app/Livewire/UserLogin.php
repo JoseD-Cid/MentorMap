@@ -13,9 +13,21 @@ class UserLogin extends Component
     public $password;
     public $reg;
     public $aviso;
+    public $register_email;
+    public $register_password;
+    public $confirm_password;
+
 
 
     public function updatedPassword($valor) {
+        if(strlen($valor) > 0 && strlen($valor) < 8) {
+            $this->aviso = "La contraseña debe tener por lo menos 8 caracteres";
+        } else {
+            $this->aviso = "";
+        }
+    }
+
+    public function updatedRegisterPassword($valor) {
         if(strlen($valor) > 0 && strlen($valor) < 8) {
             $this->aviso = "La contraseña debe tener por lo menos 8 caracteres";
         } else {
@@ -52,18 +64,23 @@ class UserLogin extends Component
         }
     }
 
-    public function checkAuth()
-    {
+    public function createUser() {
+        $this->validate([
+            'register_email' => ['required', 'email', 'unique:users,email'],
+            'register_password' => ['required', 'min:8'],
+            'confirm_password' => ['required', 'same:register_password'],
+        ]);
 
-        if (Auth::check()) {
-            $this->reg = "Verificado";
-        } else {
-            $this->reg = "No verificado";
+        $user = User::create([
+            'email' => $this->register_email,
+            'password' => bcrypt($this->register_password),
+        ]);
+
+        Auth::login($user);
+
+        if($user) {
+            return $this->redirectRoute('user-role-selection');
         }
     }
 
-    public function updatedInput($live)
-    {
-        dump($live);
-    }
 }
