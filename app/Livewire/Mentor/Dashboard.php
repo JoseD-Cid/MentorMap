@@ -6,7 +6,6 @@ use Livewire\Component;
 use Livewire\Attributes\Layout;
 use App\Models\Discipline;
 use App\Models\Subject;
-use phpDocumentor\Reflection\Types\This;
 
 class Dashboard extends Component
 {
