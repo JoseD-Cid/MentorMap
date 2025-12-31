@@ -12,3 +12,8 @@
 
 @plugin 'tailwind-scrollbar';
 @plugin "@iconify/tailwind4";
+
+@theme {
+  --color-mmgreen: oklch(0.6851 0.2081 143.04);
+  --color-mmblue: oklch(0.5461 0.2152 262.88);
+}
