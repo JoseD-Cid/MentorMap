@@ -1,4 +1,4 @@
-<div x-data="{ login: true }" class="flex h-screen items-center justify-center" x-transition>
+<div x-data="{ login: $wire.isLogin }" class="flex h-screen items-center justify-center" x-transition>
     <div class="flex flex-col w-96 p-6 rounded-lg shadow-md shadow-gray-300 border border-gray-300">
         <div class="relative h-105">
             {{-- Relative va de la mano con  la clase absolute, para posicionar elementos especificos en la ubicación deseada --}}

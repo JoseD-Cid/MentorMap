@@ -5,6 +5,7 @@ namespace App\Livewire\User;
 use Livewire\Component;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\Url;
 
 
 class UserLogin extends Component
@@ -17,10 +18,19 @@ class UserLogin extends Component
     public $register_password;
     public $confirm_password;
 
+    #[Url]
+    public ?bool $isLogin = null;
+
+    public function mount()
+    {
+        dump($this->isLogin, 'holaa');
+    }
+
     public function render()
     {
         return view('livewire.user.user-login');
     }
+
 
     public function updatedPassword($valor)
     {
@@ -39,8 +49,6 @@ class UserLogin extends Component
             $this->aviso = "";
         }
     }
-
-
 
     public function ingresar()
     {

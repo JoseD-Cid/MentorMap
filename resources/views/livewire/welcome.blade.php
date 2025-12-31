@@ -12,11 +12,11 @@
         </article>
         {{-- Login buttons --}}
         <section class="flex font-semibold gap-2 text-xs md:text-sm">
-            <button
+            <button wire:click="redirectLogin(1)"
                 class="font-semibold rounded-lg px-4 hover:bg-slate-100 transition-all active:bg-slate-200 active:scale-98">
                 Iniciar Sesión
             </button>
-            <button
+            <button wire:click="redirectLogin(0)"
                 class="text-white bg-mmgreen shadow shadow-slate-300 rounded-lg px-4 hover:brightness-105 active:brightness-95 transition-all active:scale-98">
                 ¡Regístrate!
             </button>
