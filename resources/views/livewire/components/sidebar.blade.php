@@ -10,8 +10,7 @@
         </div>
 
         <p x-transition :class="expanded ? '' : 'md:hidden'"
-            class="text-base md:text-xl transition-all flex flex-col leading-none cursor-default select-none"
-            style="font-family: 'Fredoka', sans-serif;">
+            class="text-base md:text-xl transition-all flex flex-col leading-none cursor-default select-none font-[Fredoka]">
             <span>Mentor</span>
             <span>Map</span>
         </p>

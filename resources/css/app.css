@@ -16,4 +16,5 @@
 @theme {
   --color-mmgreen: oklch(0.6851 0.2081 143.04);
   --color-mmblue: oklch(0.5461 0.2152 262.88);
+  --color-mmblack: oklch(0.2931 0 0);
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\User;
 
 use Livewire\Component;
 use App\Models\User;
@@ -17,28 +17,30 @@ class UserLogin extends Component
     public $register_password;
     public $confirm_password;
 
-
-
-    public function updatedPassword($valor) {
-        if(strlen($valor) > 0 && strlen($valor) < 8) {
-            $this->aviso = "La contraseña debe tener por lo menos 8 caracteres";
-        } else {
-            $this->aviso = "";
-        }
-    }
-
-    public function updatedRegisterPassword($valor) {
-        if(strlen($valor) > 0 && strlen($valor) < 8) {
-            $this->aviso = "La contraseña debe tener por lo menos 8 caracteres";
-        } else {
-            $this->aviso = "";
-        }
-    }
-
     public function render()
     {
-        return view('livewire.user-login');
+        return view('livewire.user.user-login');
     }
+
+    public function updatedPassword($valor)
+    {
+        if (strlen($valor) > 0 && strlen($valor) < 8) {
+            $this->aviso = "La contraseña debe tener por lo menos 8 caracteres";
+        } else {
+            $this->aviso = "";
+        }
+    }
+
+    public function updatedRegisterPassword($valor)
+    {
+        if (strlen($valor) > 0 && strlen($valor) < 8) {
+            $this->aviso = "La contraseña debe tener por lo menos 8 caracteres";
+        } else {
+            $this->aviso = "";
+        }
+    }
+
+
 
     public function ingresar()
     {
@@ -58,13 +60,12 @@ class UserLogin extends Component
             } elseif ($user->hasRole('student')) {
                 return $this->redirectRoute('student-dashboard');
             }
-
         } else {
-
         }
     }
 
-    public function createUser() {
+    public function createUser()
+    {
         $this->validate([
             'register_email' => ['required', 'email', 'unique:users,email'],
             'register_password' => ['required', 'min:8'],
@@ -78,9 +79,8 @@ class UserLogin extends Component
 
         Auth::login($user);
 
-        if($user) {
+        if ($user) {
             return $this->redirectRoute('user-role-selection');
         }
     }
-
 }

@@ -13,7 +13,7 @@
     <title>{{ $title ?? 'Page Title' }}</title>
 </head>
 
-<body style="font-family: Nunito, sans-serif;">
+<body class="text-mmblack" style="font-family: Nunito, sans-serif;">
     {{ $slot }}
 </body>
 

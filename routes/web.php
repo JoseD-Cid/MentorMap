@@ -1,7 +1,7 @@
 <?php
 
 use App\Livewire\Student\Dashboard;
-use App\Livewire\UserLogin;
+use App\Livewire\User\UserLogin;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Mentor\Dashboard as MentorDashboard;
@@ -10,8 +10,10 @@ use App\Livewire\Mentor\MyProfile;
 use App\Livewire\Mentor\MyTopics;
 use App\Livewire\Student\Dashboard as StudentDashboard;
 use App\Livewire\User\RoleSelection as UserSelectionRole;
+use App\Livewire\Welcome;
 
-Route::get('/', UserLogin::class);
+Route::get('/', Welcome::class)->name('welcome');
+Route::get('/login', UserLogin::class)->name('login');
 Route::get('/role-selection', UserSelectionRole::class)->name('user-role-selection');
 
 Route::group(['middleware' => ['role:mentor']], function () {
