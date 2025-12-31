@@ -6,7 +6,7 @@
         @vite('resources/css/app.css')
         <title>{{ $title ?? 'Page Title' }}</title>
     </head>
-    <body>
+    <body style="font-family: Nunito, sans-serif;">
         Student Layout
         {{ $slot }}
     </body>
