@@ -1,4 +1,4 @@
-<div class="flex flex-col min-h-screen items-center">
+<div class="flex flex-col">
     <header class="shrink-0 flex justify-between w-full md:max-w-384 h-max p-4 md:px-8 sticky top-0 z-20 bg-white border-b border-gray-300">
         <figure class="flex">
             <div class="flex size-8 md:size-10">

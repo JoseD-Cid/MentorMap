@@ -4,17 +4,17 @@
     :class="expanded ? 'md:w-48 h-34' : 'md:w-16 h-16'">
 
     {{-- Expand button --}}
-    <div x-on:click="expanded = !expanded" class="flex gap-2 items-center active:scale-98">
-        <div class="flex max-w-8 md:h-12 h-8 shrink-0 active:text-red-400">
-            <x-mentor-map-logo phase="active white" />
+    <figure x-on:click="expanded = !expanded" class="flex gap-2 items-center active:scale-98">
+        <div class="flex max-w-8 md:h-12 h-8 shrink-0">
+            <x-mentor-map-logo phase="white" />
         </div>
 
-        <p x-transition :class="expanded ? '' : 'md:hidden'"
+        <div x-transition :class="expanded ? '' : 'md:hidden'"
             class="text-base md:text-xl transition-all flex flex-col leading-none cursor-default select-none font-[Fredoka]">
             <span>Mentor</span>
             <span>Map</span>
-        </p>
-    </div>
+        </div>
+    </figure>
 
     {{-- Rest of the buttons --}}
     <section class="flex flex-col gap-2 md:gap-4" :class="expanded ? '' : 'hidden md:flex'">

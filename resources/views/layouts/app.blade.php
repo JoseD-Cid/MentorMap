@@ -14,7 +14,9 @@
 </head>
 
 <body class="text-mmblack" style="font-family: Nunito, sans-serif;">
-    {{ $slot }}
+    <main class="flex flex-col min-h-screen">
+        {{ $slot }}
+    </main>
 </body>
 
 </html>

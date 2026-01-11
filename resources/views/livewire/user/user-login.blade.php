@@ -1,40 +1,29 @@
-<div x-data="{ login: $wire.isLogin }" class="bg-slate-50 flex flex-col  h-screen" x-transition>
-    <button x-transition :class="login ? 'bg-mmblue' : ''" x-on:click="login = !login">
-        Iniciar Sesión
-    </button>
-</div>
-{{-- <main
-        class="relative mx-12 w-full max-w-3xl bg-white border border-gray-300 flex h-72 md:h-112 max-h-[90vh] m-auto rounded-xl shadow overflow-auto">
-        <section class="hidden md:flex w-2/5 bg-mmblue flex-col items-center justify-center">
-            <figure class="flex size-24 w-max">
-                <x-mentor-map-logo phase="white" />
-            </figure>
-            <label class="leading-none flex flex-col text-center text-white text-4xl mt-4"
-                style="font-family: Fredoka, sans-serif;">
-                <span>Mentor</span>
-                <span>Map</span>
-            </label>
-        </section>
-        <section class="w-3/5">
-            <article x-show="login" x-transition
-                class="h-full w-full md:w-3/5 flex items-center bg-red-100 p-4 absolute">
-                Login
-                <button x-on:click="login = !login"
-                    class="border rounded text-blue-800 underline active:scale-96 transition-all">
-                    Reg
-                </button>
-            </article>
+<div class="bg-slate-50 flex flex-col min-h-screen justify-center items-center py-4 text-mmblack">
+    <figure class="flex w-max h-12 mb-4">
+        <x-mentor-map-logo phase="black" />
+    </figure>
+    <form wire:submit.prevent="loginUser" class="w-full md:max-w-md flex flex-col gap-4 items-center px-8">
+        <h3 class="font-bold text-2xl">Iniciar Sesión</h3>
+        <div class="flex gap-2 items-center pl-2 w-full border-b text-mmblack">
+            <span class="icon-[si--mail-duotone] size-6 text-mmblack"></span>
+            <input wire:model="email" class="p-2 w-full focus:outline-none" placeholder="Correo Electrónico..." type="email">
+        </div>
+        <div class="flex gap-2 items-center pl-2 w-full border-b text-mmblack">
+            <span class="icon-[ph--key-duotone] size-6 text-mmblack"></span>
+            <input wire:model="password" class="p-2 w-full focus:outline-none" placeholder="Contraseña..." type="password">
+        </div>
 
-            <article x-show="!login" x-transition
-                class="h-full w-full md:w-3/5 flex items-center bg-green-100 p-4 absolute">
-                Register
-                <button x-on:click="login = !login"
-                    class="border rounded text-blue-800 underline active:scale-96 transition-all">
-                    Login
-                </button>
-            </article>
-        </section>
-    </main> --}}
+        <button class="cursor-pointer w-max mt-2 bg-mmblack text-white rounded-lg px-4 py-2 hover:bg-mmblack/90 transition-all active:scale-98" type="submit">
+            Ingresar
+        </button>
+
+        <a class="text-mmblue hover:font-semibold active:scale-98 transition-all" href="#">
+            ¿No tienes cuenta? ¡Regístrate!
+        </a>
+
+    </form>
+</div>
+
 
 {{-- <div class="flex flex-col w-96 p-6 rounded-lg shadow-md shadow-gray-300 border border-gray-300">
         <div class="relative h-105">

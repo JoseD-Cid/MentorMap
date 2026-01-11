@@ -18,9 +18,6 @@ class UserLogin extends Component
     public $register_password;
     public $confirm_password;
 
-    #[Url]
-    public ?bool $isLogin = true;
-
     public function mount()
     {
 
@@ -50,10 +47,8 @@ class UserLogin extends Component
         }
     }
 
-    public function ingresar()
+    public function loginUser()
     {
-        // $this->label = $this->label . " " . $this->input;
-        // $this->input = "";
         $credentials = $this->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
