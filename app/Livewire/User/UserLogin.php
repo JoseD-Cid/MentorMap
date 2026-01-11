@@ -19,11 +19,11 @@ class UserLogin extends Component
     public $confirm_password;
 
     #[Url]
-    public ?bool $isLogin = null;
+    public ?bool $isLogin = true;
 
     public function mount()
     {
-        dump($this->isLogin, 'holaa');
+
     }
 
     public function render()

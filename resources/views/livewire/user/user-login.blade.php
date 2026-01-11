@@ -1,7 +1,43 @@
-<div x-data="{ login: $wire.isLogin }" class="flex h-screen items-center justify-center" x-transition>
-    <div class="flex flex-col w-96 p-6 rounded-lg shadow-md shadow-gray-300 border border-gray-300">
+<div x-data="{ login: $wire.isLogin }" class="bg-slate-50 flex flex-col  h-screen" x-transition>
+    <button x-transition :class="login ? 'bg-mmblue' : ''" x-on:click="login = !login">
+        Iniciar Sesión
+    </button>
+</div>
+{{-- <main
+        class="relative mx-12 w-full max-w-3xl bg-white border border-gray-300 flex h-72 md:h-112 max-h-[90vh] m-auto rounded-xl shadow overflow-auto">
+        <section class="hidden md:flex w-2/5 bg-mmblue flex-col items-center justify-center">
+            <figure class="flex size-24 w-max">
+                <x-mentor-map-logo phase="white" />
+            </figure>
+            <label class="leading-none flex flex-col text-center text-white text-4xl mt-4"
+                style="font-family: Fredoka, sans-serif;">
+                <span>Mentor</span>
+                <span>Map</span>
+            </label>
+        </section>
+        <section class="w-3/5">
+            <article x-show="login" x-transition
+                class="h-full w-full md:w-3/5 flex items-center bg-red-100 p-4 absolute">
+                Login
+                <button x-on:click="login = !login"
+                    class="border rounded text-blue-800 underline active:scale-96 transition-all">
+                    Reg
+                </button>
+            </article>
+
+            <article x-show="!login" x-transition
+                class="h-full w-full md:w-3/5 flex items-center bg-green-100 p-4 absolute">
+                Register
+                <button x-on:click="login = !login"
+                    class="border rounded text-blue-800 underline active:scale-96 transition-all">
+                    Login
+                </button>
+            </article>
+        </section>
+    </main> --}}
+
+{{-- <div class="flex flex-col w-96 p-6 rounded-lg shadow-md shadow-gray-300 border border-gray-300">
         <div class="relative h-105">
-            {{-- Relative va de la mano con  la clase absolute, para posicionar elementos especificos en la ubicación deseada --}}
             <section x-transition x-show="login" class="flex absolute inset-0 flex-col h-96">
                 <h2 class="text-center mb-4 font-semibold text-lg">Iniciar Sesión</h2>
                 <label class="mb-1">Ingrese su Email</label>
@@ -21,16 +57,17 @@
                         class="text-blue-600 font-semibold py-2 rounded p-1 underline">Registrarse</button>
                 </div>
             </section>
-
             <section x-transition x-show="!login" class="flex absolute inset-0  flex-col h-96">
                 <h2 class="text-center mb-4 font-semibold text-lg">Registrarse</h2>
                 <label class="mb-1">Ingrese su Email</label>
                 <input wire:model="register_email" class="border border-gray-400 rounded px-2 py-1 mb-4" type="text">
                 <label class="mb-1">Ingrese su Contraseña</label>
-                <input wire:model.live="register_password" class="border border-gray-400 rounded px-2 py-1 mb-4" type="password">
-                <label class="text-red-400"> {{$aviso}} </label>
+                <input wire:model.live="register_password" class="border border-gray-400 rounded px-2 py-1 mb-4"
+                    type="password">
+                <label class="text-red-400"> {{ $aviso }} </label>
                 <label class="mb-1">Confirme su Contraseña</label>
-                <input wire:model="confirm_password" class="border border-gray-400 rounded px-2 py-1 mb-4" type="password">
+                <input wire:model="confirm_password" class="border border-gray-400 rounded px-2 py-1 mb-4"
+                    type="password">
                 <div class="flex flex-col gap-2">
 
                     <button wire:click="createUser"
@@ -48,5 +85,5 @@
                 </div>
             </section>
         </div>
-    </div>
-</div>
+    </div> --}}
+{{-- </div> --}}

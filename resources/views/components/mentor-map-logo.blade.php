@@ -46,12 +46,12 @@
     .mentor-map-logo.color .logo-m:active,
     .mentor-map-logo.white .logo-ring:active,
     .mentor-map-logo.white .logo-m:active {
-        filter: brightness(0.85);
+        filter: brightness(0.90);
     }
 
     /* Active state - aclarar black */
     .mentor-map-logo.black .logo-ring:active,
     .mentor-map-logo.black .logo-m:active {
-        filter: brightness(1.3);
+        filter: brightness(1.5);
     }
 </style>
