@@ -17,7 +17,7 @@
             Ingresar
         </button>
 
-        <a class="text-mmblue hover:font-semibold active:scale-98 transition-all text-center" href="#">
+        <a class="text-mmblue hover:font-semibold active:scale-95 transition-all text-center" href="#">
             ¿No tienes cuenta? ¡Regístrate!
         </a>
 
