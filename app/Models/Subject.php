@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Subject extends Model
 {
     protected $table = 'subjects';
+
+    public function discipline()
+    {
+        return $this->belongsTo(Discipline::class, 'discipline_id');
+    }
 }
