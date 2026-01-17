@@ -1,8 +1,6 @@
 <?php
 
-use App\Livewire\Student\Dashboard;
 use App\Livewire\User\UserLogin;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Mentor\Dashboard as MentorDashboard;
 use App\Livewire\Mentor\MyLocation;

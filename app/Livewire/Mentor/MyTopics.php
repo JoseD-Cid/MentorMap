@@ -8,7 +8,6 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Topic;
 use App\Models\Subject;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class MyTopics extends Component
 {

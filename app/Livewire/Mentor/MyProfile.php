@@ -3,7 +3,6 @@
 namespace App\Livewire\Mentor;
 
 use Livewire\Component;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class MyProfile extends Component

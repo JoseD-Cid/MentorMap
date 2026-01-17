@@ -5,7 +5,6 @@ namespace App\Livewire\User;
 use Livewire\Component;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use Livewire\Attributes\Url;
 
 
 class UserLogin extends Component
