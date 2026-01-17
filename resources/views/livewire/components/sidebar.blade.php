@@ -47,8 +47,8 @@
             <span class="text-xs md:text-sm" x-show="expanded" x-transition>Perfil</span>
         </a>
         {{-- Logout --}}
-        <button
-            class="hover:text-red-300 flex-row-reverse md:flex-row hover:scale-103 transition-all rounded-lg active:scale-98 active:text-gray-300 flex gap-2 items-center whitespace-nowrap duration-100"
+        <button wire:click="logout"
+            class="cursor-pointer hover:text-red-300 flex-row-reverse md:flex-row hover:scale-103 transition-all rounded-lg active:scale-98 active:text-gray-300 flex gap-2 items-center whitespace-nowrap duration-100"
             :class="expanded ? 'md:justify-start' : ''">
             <span class="icon-[solar--exit-bold-duotone] size-5 md:size-8 shrink-0"></span>
             <span class="text-xs md:text-sm" x-show="expanded" x-transition>Cerrar Sesión</span>

@@ -4,6 +4,7 @@ namespace App\Livewire\Mentor;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\Layout;
 
 class MyProfile extends Component
 {
@@ -12,6 +13,7 @@ class MyProfile extends Component
     public $phone;
     public $sex;
 
+    #[Layout('layouts.mentor')]
     public function render()
     {
         return view('livewire.mentor.my-profile');

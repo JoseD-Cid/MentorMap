@@ -12,7 +12,7 @@ use App\Livewire\User\RegisterStudent;
 use App\Livewire\User\RoleSelection as UserSelectionRole;
 use App\Livewire\Welcome;
 
-Route::get('/', Welcome::class)->name('welcome');
+Route::get('/', Welcome::class)->name('welcome-page');
 Route::get('/login', UserLogin::class)->name('login');
 Route::get('/role-selection', UserSelectionRole::class)->name('role-selection');
 Route::get('/register-student', RegisterStudent::class)->name('register-student');
