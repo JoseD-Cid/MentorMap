@@ -1,9 +1,9 @@
 <div class="flex flex-col items-center justify-center w-full h-full grow gap-6 p-8">
     <div class="flex flex-col items-center gap-4">
-        <figure class="size-16 md:size-20 flex">
+        <figure class="w-max h-16 flex">
             <x-mentormap-logo phase="color" />
         </figure>
-        <label class="font-bold text-lg md:text-xl text-mmblack/75">Selecciona tu rol...</label>
+        <label class="font-bold text-2xl">Selecciona tu rol...</label>
     </div>
     <div class="flex flex-col md:flex-row items-center justify-center gap-8 w-full text-center">
         <a href="{{ route('register-student') }}"
