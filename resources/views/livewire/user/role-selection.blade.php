@@ -1,6 +1,6 @@
 <div class="flex flex-col items-center justify-center w-full h-full grow gap-6 p-8">
     <div class="flex flex-col items-center gap-4">
-        <figure class="size-12 md:size-16 flex">
+        <figure class="size-16 md:size-20 flex">
             <x-mentormap-logo phase="color" />
         </figure>
         <label class="font-bold text-lg md:text-xl text-mmblack/75">Selecciona tu rol...</label>
