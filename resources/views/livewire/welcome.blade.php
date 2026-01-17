@@ -38,16 +38,16 @@
                 </p>
 
                 <div class="flex flex-col gap-4 w-full md:w-96">
-                    <button
+                    <a href="{{ route('register-student') }}"
                         class="cursor-pointer text-sm md:text-base md:justify-start justify-center w-full px-4 py-3 text-white rounded-full flex items-center gap-2 hover:brightness-105 active:brightness-95 transition-all active:scale-98 bg-mmgreen shadow">
                         <span class="icon-[ph--student-fill] min-h-6 min-w-6"></span>
                         ¡Encuentra el Mentor ideal para ti!
-                    </button>
-                    <button
+                    </a>
+                    <a href="{{ route('register-mentor') }}"
                         class="cursor-pointer text-sm md:text-base md:justify-start justify-center w-full px-4 py-3 text-white rounded-full flex items-center gap-2 hover:brightness-110 active:brightness-96 transition-all active:scale-98 bg-mmblue shadow">
                         <span class="icon-[ph--chalkboard-teacher-duotone] min-h-6 min-w-6"></span>
                         ¡Promociónate como Mentor en tu zona!
-                    </button>
+                    </a>
                 </div>
             </section>
 

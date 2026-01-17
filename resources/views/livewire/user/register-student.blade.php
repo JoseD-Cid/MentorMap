@@ -1,3 +1,3 @@
 <div>
-    Register Mentor
+    Register Student
 </div>
