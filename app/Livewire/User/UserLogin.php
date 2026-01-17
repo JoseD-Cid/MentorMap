@@ -83,7 +83,7 @@ class UserLogin extends Component
         Auth::login($user);
 
         if ($user) {
-            return $this->redirectRoute('user-role-selection');
+            return $this->redirectRoute('role-selection');
         }
     }
 }

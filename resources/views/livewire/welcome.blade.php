@@ -16,7 +16,7 @@
                 class="shadow flex items-center font-semibold rounded-lg px-4 hover:bg-slate-100 transition-all active:bg-slate-200 active:scale-98">
                 Iniciar Sesión
             </a>
-            <a href="{{ route('login') }}"
+            <a href="{{ route('role-selection') }}"
                 class="flex items-center text-white bg-mmgreen shadow shadow-slate-300 rounded-lg px-4 hover:brightness-105 active:brightness-95 transition-all active:scale-98">
                 ¡Regístrate!
             </a>

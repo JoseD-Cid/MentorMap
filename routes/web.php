@@ -14,7 +14,7 @@ use App\Livewire\Welcome;
 
 Route::get('/', Welcome::class)->name('welcome');
 Route::get('/login', UserLogin::class)->name('login');
-Route::get('/role-selection', UserSelectionRole::class)->name('user-role-selection');
+Route::get('/role-selection', UserSelectionRole::class)->name('role-selection');
 
 Route::group(['middleware' => ['role:mentor']], function () {
     Route::get('/mentor/dashboard', MentorDashboard::class)->name('mentor-dashboard');
