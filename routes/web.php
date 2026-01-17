@@ -20,15 +20,16 @@ Route::get('/role-selection', UserSelectionRole::class)->name('role-selection');
 Route::get('/register-student', RegisterStudent::class)->name('register-student');
 Route::get('/register-mentor', RegisterMentor::class)->name('register-mentor');
 
-Route::group(['middleware' => ['role:mentor']], function () {
-    Route::get('/mentor/dashboard', MentorDashboard::class)->name('mentor-dashboard');
-    Route::get('/mentor/my-profile', MyProfile::class)->name('mentor-my-profile');
-    Route::get('/mentor/my-location', MyLocation::class)->name('mentor-my-location');
-    Route::get('/mentor/my-topics', MyTopics::class)->name('mentor-my-topics');
- }) ;
+Route::middleware(['auth'])->group(function () {
+    Route::group(['middleware' => ['role:mentor']], function () {
+        Route::get('/mentor/dashboard', MentorDashboard::class)->name('mentor-dashboard');
+        Route::get('/mentor/my-profile', MyProfile::class)->name('mentor-my-profile');
+        Route::get('/mentor/my-location', MyLocation::class)->name('mentor-my-location');
+        Route::get('/mentor/my-topics', MyTopics::class)->name('mentor-my-topics');
+    });
 
- Route::group(['middleware' => ['role:student']], function () {
-    Route::get('/student', StudentDashboard::class)->name('student-dashboard');
-    Route::get('/student/my-profile', MyProfile::class)->name('mentor-my-profile');
- });
-
+    Route::group(['middleware' => ['role:student']], function () {
+        Route::get('/student', StudentDashboard::class)->name('student-dashboard');
+        Route::get('/student/my-profile', MyProfile::class)->name('mentor-my-profile');
+    });
+});
