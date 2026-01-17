@@ -1,7 +1,7 @@
 <aside x-data="{ expanded: $persist(false) }" {{-- x-on:mousemove="expanded = true"
     x-on:mouseout="expanded = false" --}}
     class="flex md:flex-col items-start justify-between text-white font-semibold md:h-screen bg-[#1A44D5] p-4 transition-all duration-200 ease-in-out relative z-0 overflow-hidden"
-    :class="expanded ? 'md:w-48 h-34' : 'md:w-16 h-16'">
+    :class="expanded ? 'md:w-48 h-41' : 'md:w-16 h-16'">
 
     {{-- Expand button --}}
     <figure x-on:click="expanded = !expanded" class="flex gap-2 items-center active:scale-98">
