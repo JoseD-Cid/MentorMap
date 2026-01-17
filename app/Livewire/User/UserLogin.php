@@ -18,12 +18,9 @@ class UserLogin extends Component
     public $register_password;
     public $confirm_password;
 
-    #[Url]
-    public ?bool $isLogin = null;
-
     public function mount()
     {
-        dump($this->isLogin, 'holaa');
+
     }
 
     public function render()
@@ -50,10 +47,8 @@ class UserLogin extends Component
         }
     }
 
-    public function ingresar()
+    public function loginUser()
     {
-        // $this->label = $this->label . " " . $this->input;
-        // $this->input = "";
         $credentials = $this->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -88,7 +83,7 @@ class UserLogin extends Component
         Auth::login($user);
 
         if ($user) {
-            return $this->redirectRoute('user-role-selection');
+            return $this->redirectRoute('role-selection');
         }
     }
 }

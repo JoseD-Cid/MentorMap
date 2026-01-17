@@ -33,12 +33,12 @@
     /* Aplicar colores con transiciones */
     .mentor-map-logo .logo-ring {
         fill: var(--ring);
-        transition: fill 0.3s ease-out, filter 0.15s ease-out;
+        transition: fill 0.1s ease-out, filter 0.1s ease-out;
     }
 
     .mentor-map-logo .logo-m {
         fill: var(--m);
-        transition: fill 0.3s ease-out, filter 0.15s ease-out;
+        transition: fill 0.1s ease-out, filter 0.1s ease-out;
     }
 
     /* Active states - oscurecer color y white */
@@ -46,12 +46,12 @@
     .mentor-map-logo.color .logo-m:active,
     .mentor-map-logo.white .logo-ring:active,
     .mentor-map-logo.white .logo-m:active {
-        filter: brightness(0.85);
+        filter: brightness(0.90);
     }
 
     /* Active state - aclarar black */
     .mentor-map-logo.black .logo-ring:active,
     .mentor-map-logo.black .logo-m:active {
-        filter: brightness(1.3);
+        filter: brightness(2);
     }
 </style>
