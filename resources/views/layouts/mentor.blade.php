@@ -17,7 +17,7 @@
 
     <livewire:components.sidebar />
 
-    <main class="flex-1 md:min-h-screen">
+    <main class="flex-1 md:min-h-screen bg-white text-mmblack">
         {{ $slot }}
     </main>
 </body>
