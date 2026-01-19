@@ -13,11 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
 </head>
 
-<body class="flex flex-col md:flex-row overflow-hidden h-screen" style="font-family: Nunito, sans-serif;">
+<body class="flex flex-col md:flex-row overflow-hidden min-h-screen" style="font-family: Nunito, sans-serif;">
 
     <livewire:components.sidebar />
 
-    <main class="flex-1 relative z-10 overflow-auto">
+    <main class="flex-1 md:min-h-screen">
         {{ $slot }}
     </main>
 </body>
