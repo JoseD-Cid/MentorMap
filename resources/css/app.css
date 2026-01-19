@@ -12,7 +12,9 @@
 
 @plugin 'tailwind-scrollbar';
 @plugin "@iconify/tailwind4";
-@plugin "daisyui";
+@plugin "daisyui" {
+    themes: light --default;
+}
 
 @theme {
   --color-mmgreen: oklch(0.6851 0.2081 143.04);
